@@ -1,5 +1,5 @@
 import socket
-from colorama import init()
+from colorama import init
 from colorama import Fore, Back , Style
 init()
 SERVER_HOST = "0.0.0.0"
