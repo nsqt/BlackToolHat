@@ -12,12 +12,14 @@ s = socket.socket()
 # bind the socket to all IP addresses of this host
 s.bind((SERVER_HOST, SERVER_PORT))
 s.listen(5)
-a= Fore.WHITE + f"Listening as (SERVER_HOST):(SERVER_PORT) ..."
-b= f"(client_address[0]):(client_address[1]) Connected!"
-print(Fore.CYAN + "[+] " + a)
+a= Fore.WHITE + f"Listening..."
+
 # accept any connections attempted
 client_socket, client_address = s.accept()
 print(Fore.GREEN + "[+] " + b)
+
+b= f"{client_address[0]}:{client_address[1]} Connected!"
+print(Fore.CYAN + "[+] " + a)
 # receiving the current working directory of the client
 cwd = client_socket.recv(BUFFER_SIZE).decode()
 print("[+] Current working directory:", cwd)
