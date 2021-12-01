@@ -1,7 +1,7 @@
 import socket
 from colorama import init()
 from colorama import Fore, Back , Style
-
+init()
 SERVER_HOST = "0.0.0.0"
 SERVER_PORT = 4444
 BUFFER_SIZE = 1024 * 128 # 128KB max size of messages, feel free to increase
